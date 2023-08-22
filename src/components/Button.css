@@ -32,3 +32,9 @@
 .pagination .prev-next-button {
     font-weight: bold;
 }
+
+.pagination button.active {
+    background-color: #0056b3;
+    /* Change to your preferred active color */
+    color: #fff;
+}

@@ -21,7 +21,12 @@ const Button = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
         </li>
         {pageNumbers.map((number) => (
           <li key={number}>
-            <button onClick={() => paginate(number)}>{number}</button>
+            <button
+              className={currentPage === number ? "active" : ""}
+              onClick={() => paginate(number)}
+            >
+              {number}
+            </button>
           </li>
         ))}
         <li>
