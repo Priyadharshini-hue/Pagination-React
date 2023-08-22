@@ -8,7 +8,7 @@ const App = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(10); //if 5 =>20pages
+  const [postsPerPage] = useState(3); //if 5 =>20pages
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -37,6 +37,7 @@ const App = () => {
         postsPerPage={postsPerPage}
         totalPosts={posts.length}
         paginate={paginate}
+        currentPage={currentPage} // Pass the current page
       />
     </div>
   );
